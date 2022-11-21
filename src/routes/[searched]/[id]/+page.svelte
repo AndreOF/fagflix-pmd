@@ -46,8 +46,7 @@
 		<h2 class="text-white">Filmes recomendados</h2>
 		<ul>
 			{#each recommedations as r}
-				<li class="text-white inline">
-					
+				<li class="text-white">
                     <div class="card w-52 bg-base-100 shadow-xl h-auto">
                         <figure><img src={'http://image.tmdb.org/t/p/w500' + r.poster_path} alt="movie poster" /></figure>
                         <div class="card-body">
