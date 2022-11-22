@@ -29,7 +29,7 @@
 </script>
 
 <div>
-	<button>VOLTAR</button>
+	<button class="text-white">VOLTAR</button>
 	<div class="flex flex-col place-items-center">
 		<h2 class="text-white">Filme selecionado</h2>
 		<div class="card w-52 bg-base-100 shadow-xl h-auto">
