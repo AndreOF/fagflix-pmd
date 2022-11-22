@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	let api_key = '42caba184f1a4239fc26e32b8e07cef0';
 	const movie = {
 		name: '',
@@ -26,10 +27,14 @@
 		movie.poster = `http://image.tmdb.org/t/p/w500${sel.poster_path}`;
 		console.log('rec: ' + recommedations);
 	});
+
+	const handleVoltarBtnClick = () => {
+		history.back();
+	};
 </script>
 
 <div>
-	<button class="text-white">VOLTAR</button>
+	<button class="text-white" on:click={handleVoltarBtnClick}>VOLTAR</button>
 	<div class="flex flex-col place-items-center">
 		<h2 class="text-white">Filme selecionado</h2>
 		<div class="card w-52 bg-base-100 shadow-xl h-auto">
