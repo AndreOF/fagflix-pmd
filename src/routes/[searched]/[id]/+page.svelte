@@ -28,36 +28,40 @@
 	});
 </script>
 
-<section>
-	<div>
-		<h2 class="text-white">Filme selecionado</h2>
-	</div>
-	<div class="card w-52 bg-base-100 shadow-xl h-auto">
-		<figure><img src={movie.poster} alt="movie poster" /></figure>
-		<div class="card-body">
-			<h6 class="card-title">
-				<p class="text-sm">{movie.name}</p>
-				<div class="badge badge-primary bg-red-700">{movie.year}</div>
-			</h6>
+<div>
+	<div class="flex flex-wrap justify-center">
+		<div class="basis-full text-center">
+			<h2 class="text-white">Filme selecionado</h2>
+		</div>
+		<div class="card w-52 bg-base-100 shadow-xl h-auto">
+			<figure><img src={movie.poster} alt="movie poster" /></figure>
+			<div class="card-body">
+				<h6 class="card-title">
+					<p class="text-sm">{movie.name}</p>
+					<div class="badge badge-primary bg-red-700">{movie.year}</div>
+				</h6>
+			</div>
 		</div>
 	</div>
 	<div>
 		<br />
 		<h2 class="text-white">Filmes recomendados</h2>
-		<ul>
+		<div class="grid grid-cols-4">
 			{#each recommedations as r}
-				<li class="text-white">
-                    <div class="card w-52 bg-base-100 shadow-xl h-auto">
-                        <figure><img src={'http://image.tmdb.org/t/p/w500' + r.poster_path} alt="movie poster" /></figure>
-                        <div class="card-body">
-                            <h6 class="card-title">
-                                <p class="text-sm text-black">{r.original_title}</p>
-                                <div class="badge badge-primary bg-red-700">{r.release_date.substring(0,4)}</div>
-                            </h6>
-                        </div>
-                    </div>
-				</li>
+				<div class="text-white mt-4">
+					<div class="card w-52 bg-base-100 shadow-xl">
+						<figure>
+							<img src={'http://image.tmdb.org/t/p/w500' + r.poster_path} alt="movie poster" />
+						</figure>
+						<div class="card-body">
+							<h6 class="card-title">
+								<p class="text-sm text-black">{r.original_title}</p>
+								<div class="badge badge-primary bg-red-700">{r.release_date.substring(0, 4)}</div>
+							</h6>
+						</div>
+					</div>
+				</div>
 			{/each}
-		</ul>
+		</div>
 	</div>
-</section>
+</div>
