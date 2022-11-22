@@ -44,7 +44,7 @@
 	</div>
 	<div class="flex flex-col">
 		<h2 class="text-white place-self-center">Filmes recomendados</h2>
-		<div class="grid grid-cols-4 md:grid-cols-2">
+		<div class="grid grid-cols-4">
 			{#each recommedations as r}
 				<div class="text-white mt-4">
 					<div class="card w-52 bg-base-100 shadow-xl">
