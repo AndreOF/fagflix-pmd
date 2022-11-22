@@ -29,10 +29,9 @@
 </script>
 
 <div>
-	<div class="flex flex-wrap justify-center">
-		<div class="basis-full text-center">
-			<h2 class="text-white">Filme selecionado</h2>
-		</div>
+	<button>VOLTAR</button>
+	<div class="flex flex-col place-items-center">
+		<h2 class="text-white">Filme selecionado</h2>
 		<div class="card w-52 bg-base-100 shadow-xl h-auto">
 			<figure><img src={movie.poster} alt="movie poster" /></figure>
 			<div class="card-body">
@@ -43,10 +42,9 @@
 			</div>
 		</div>
 	</div>
-	<div>
-		<br />
-		<h2 class="text-white">Filmes recomendados</h2>
-		<div class="grid grid-cols-4">
+	<div class="flex flex-col">
+		<h2 class="text-white place-self-center">Filmes recomendados</h2>
+		<div class="grid grid-cols-4 md:grid-cols-2">
 			{#each recommedations as r}
 				<div class="text-white mt-4">
 					<div class="card w-52 bg-base-100 shadow-xl">

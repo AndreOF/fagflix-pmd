@@ -56,12 +56,6 @@
 				bind:selectedItem={searched}
 				onChange={test}
 			/>
-			<button
-				class="w-24 p-2 rounded-md bg-green-900 font-bold text-white"
-				on:click={search(searched.name, searched.id)}
-			>
-				Escolher
-			</button>
 		</div>
 	</div>
 </section>
